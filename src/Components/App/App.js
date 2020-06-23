@@ -1,8 +1,9 @@
 import React from 'react';
+import StartPage from "./../StartPage/StartPage"
 import './App.scss';
 
 function App() {
-  return <h1>Here will be a TicTacToe Game created</h1>
+  return <StartPage />
 }
 
 export default App;
