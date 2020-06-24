@@ -5,7 +5,7 @@ import "./StartPage.scss";
 
 const StartPage = () => {
   return (
-    <div class={"startPage"}>
+    <div className={"startPage"}>
       <Header />
       <Forms />
     </div>

@@ -18,6 +18,7 @@ const Forms = () => {
             <input type={"text"} name={"name"}></input>
             <label>Let's choose your own color</label>
             <input type={"text"} name={"color"}></input>
+            <button>Let's play!</button>
           </form>
         </div>
         <CheckboxChuck />

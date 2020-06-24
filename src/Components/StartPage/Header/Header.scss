@@ -1,5 +1,14 @@
 .header {
     font-family: 'Pangolin', cursive;
     color: yellow;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    animation: headerAnimation 1s infinite;
+    height: 9rem;
 }
+
+
+@keyframes headerAnimation {
+    0%   {color: yellow; font-size: 2.5rem; }
+    50% {color: white; font-size: 2.8rem;}
+    100% {color: yellow; font-size: 2.5rem;}
+  }

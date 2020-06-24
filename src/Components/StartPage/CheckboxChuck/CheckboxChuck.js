@@ -5,8 +5,8 @@ const CheckboxChuck = () => {
   return (
     <div className={"checkboxChuck"}>
       <form className={"chuckInput"}>
-        <input type="checkbox" id="checkboxChuck" name="checkboxChuck"></input>
-        <label for="checkboxChuck">
+        <input checked={true} type="checkbox" id="checkboxChuck" name="checkboxChuck"></input>
+        <label htmlFor="checkboxChuck">
           Mark if you want to get some Chuck Norris' jokes!
         </label>
       </form>
