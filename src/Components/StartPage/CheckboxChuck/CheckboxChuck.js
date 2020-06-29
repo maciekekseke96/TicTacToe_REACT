@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./CheckboxChuck.scss";
 
-const CheckboxChuck = () => {
+const CheckboxChuck = (props) => {
   return (
     <div className={"checkboxChuck"}>
       <form className={"chuckInput"}>
-        <input checked={true} type="checkbox" id="checkboxChuck" name="checkboxChuck"></input>
+        <input type="checkbox" id="checkboxChuck" name="checkboxChuck" onChange = {(e)=> props.isChuckJokesWanted(e.target.checked)}></input>
         <label htmlFor="checkboxChuck">
           Mark if you want to get some Chuck Norris' jokes!
         </label>

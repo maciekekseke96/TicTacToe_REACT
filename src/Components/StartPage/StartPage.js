@@ -3,11 +3,11 @@ import Header from "./Header/Header";
 import Forms from "./Forms/Forms";
 import "./StartPage.scss";
 
-const StartPage = () => {
+const StartPage = (props) => {
   return (
     <div className={"startPage"}>
       <Header />
-      <Forms />
+      <Forms gameDataSet = {props.gameDataSet} />
     </div>
   );
 };
