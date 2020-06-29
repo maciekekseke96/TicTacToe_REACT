@@ -41,8 +41,9 @@ const Forms = (props) => {
                   p2: player2Name,
                   p1Color: player1Color,
                   p2Color: player2Color,
-                  chuckJokes: chuckJokes
+                  chuckJokes: chuckJokes,
                 });
+                props.setPlayOn(true);
               }}
             >
               Let's play!

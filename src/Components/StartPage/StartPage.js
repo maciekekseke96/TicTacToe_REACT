@@ -7,7 +7,7 @@ const StartPage = (props) => {
   return (
     <div className={"startPage"}>
       <Header />
-      <Forms gameDataSet = {props.gameDataSet} />
+      <Forms setPlayOn = {props.setPlayOn} gameDataSet = {props.gameDataSet} />
     </div>
   );
 };
