@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import StartPage from "./../StartPage/StartPage";
+import Main from "./../Main/Main"
 import "./App.scss";
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
   }, []);
 
   if (isPlayOn) {
-    return <h1>Gra sie</h1>
+    return <Main />
   } else {
     return <StartPage setPlayOn= {setisPlayOn} gameDataSet={setGameData} />;
   }
