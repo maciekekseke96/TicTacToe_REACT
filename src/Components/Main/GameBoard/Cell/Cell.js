@@ -6,10 +6,15 @@ const Cell = (props) => {
 
   const handleCellClick = () => {
     let cells = [...props.cells];
-    cells[cellId] = { status: "marked", sign: "X" };
+    cells[cellId] = { status: "marked", sign: props.actualSign };
     props.setCells(cells);
 
     props.setGameState(cells);
+    if (props.actualSign === "X") {
+      props.setSign("O");
+    } else {
+      props.setSign("X");
+    }
   };
   return (
     <div

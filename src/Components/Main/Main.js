@@ -5,7 +5,11 @@ import GameBoard from "./GameBoard/GameBoard";
 const Main = (props) => {
   return (
     <div className={"main"}>
-      <GameBoard setGameState= {props.setGameState} />
+      <GameBoard
+        actualSign={props.actualSign}
+        setSign={props.setSign}
+        setGameState={props.setGameState}
+      />
     </div>
   );
 };

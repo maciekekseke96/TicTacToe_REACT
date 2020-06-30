@@ -7,7 +7,17 @@ const GameBoard = (props) => {
   return (
     <div className={"gameBoard"}>
       {cells.map((cell, index) => {
-        return <Cell setGameState={props.setGameState} cells={cells} setCells={setCells} id={index} key={index} />;
+        return (
+          <Cell
+            actualSign={props.actualSign}
+            setSign={props.setSign}
+            setGameState={props.setGameState}
+            cells={cells}
+            setCells={setCells}
+            id={index}
+            key={index}
+          />
+        );
       })}
     </div>
   );

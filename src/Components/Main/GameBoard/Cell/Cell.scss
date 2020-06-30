@@ -3,6 +3,11 @@
     width: 150px;
     border: 1px solid black;
     float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-family: 'Pangolin', cursive;
 
     &:hover {
         cursor: pointer;

@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import StartPage from "./../StartPage/StartPage";
-import Main from "./../Main/Main"
+import Main from "./../Main/Main";
 import "./App.scss";
 
 function App() {
   const [isPlayOn, setisPlayOn] = useState(true);
   const [gameData, setGameData] = useState(null);
   const [chuckJokes, setChuckJokes] = useState(null);
-  const [gameState, setGameState] = useState(null)
+  const [gameState, setGameState] = useState(null);
+  const [actualSign, setActualSign] = useState("X");
 
   useEffect(() => {
     fetch("http://api.icndb.com/jokes")
@@ -16,9 +17,15 @@ function App() {
   }, []);
 
   if (isPlayOn) {
-    return <Main setGameState = {setGameState} />
+    return (
+      <Main
+        actualSign={actualSign}
+        setSign={setActualSign}
+        setGameState={setGameState}
+      />
+    );
   } else {
-    return <StartPage setPlayOn= {setisPlayOn} gameDataSet={setGameData} />;
+    return <StartPage setPlayOn={setisPlayOn} gameDataSet={setGameData} />;
   }
 }
 
