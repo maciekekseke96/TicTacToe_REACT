@@ -4,9 +4,10 @@ import Main from "./../Main/Main"
 import "./App.scss";
 
 function App() {
-  const [isPlayOn, setisPlayOn] = useState(false);
+  const [isPlayOn, setisPlayOn] = useState(true);
   const [gameData, setGameData] = useState(null);
   const [chuckJokes, setChuckJokes] = useState(null);
+  const [gameState, setGameState] = useState(null)
 
   useEffect(() => {
     fetch("http://api.icndb.com/jokes")
@@ -15,7 +16,7 @@ function App() {
   }, []);
 
   if (isPlayOn) {
-    return <Main />
+    return <Main setGameState = {setGameState} />
   } else {
     return <StartPage setPlayOn= {setisPlayOn} gameDataSet={setGameData} />;
   }
