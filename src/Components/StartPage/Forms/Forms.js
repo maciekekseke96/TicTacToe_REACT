@@ -37,10 +37,18 @@ const Forms = (props) => {
               onClick={(e) => {
                 e.preventDefault();
                 props.gameDataSet({
-                  p1: player1Name,
-                  p2: player2Name,
-                  p1Color: player1Color,
-                  p2Color: player2Color,
+                  p1: {
+                    name: player1Name,
+                    score: 0,
+                    color: player1Color,
+                    sign: "X",
+                  },
+                  p2: {
+                    name: player2Name,
+                    score: 0,
+                    color: player2Color,
+                    sign: "O",
+                  },
                   chuckJokes: chuckJokes,
                 });
                 props.setPlayOn(true);

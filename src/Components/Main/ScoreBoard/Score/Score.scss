@@ -1,0 +1,16 @@
+.score {
+  height: 80%;
+  width: 20%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 12px;
+  font-family: "Pangolin", cursive;
+
+  p {
+    font-size: 24px;
+    font-family: "Pangolin", cursive;
+  }
+}
