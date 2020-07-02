@@ -10,14 +10,12 @@ function App() {
     p2: { name: "Maciej", color: "black", sign: "0", score: 0 },
     chuckJokes: true,
   });
-  const [chuckJokes, setChuckJokes] = useState(null);
   const [gameState, setGameState] = useState(null);
   const [actualSign, setActualSign] = useState("X");
 
   if (isPlayOn) {
     return (
       <Main
-        jokes={chuckJokes}
         gameData={gameData}
         actualSign={actualSign}
         setSign={setActualSign}

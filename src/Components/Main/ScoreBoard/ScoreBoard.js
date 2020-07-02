@@ -8,7 +8,7 @@ const ScoreBoard = (props) => {
     <div className={"scoreBoard"}>
       <Score playerName = {props.gameData.p1.name} playerScore = {props.gameData.p1.score} />
       <Score playerName = {props.gameData.p2.name} playerScore = {props.gameData.p2.score} />
-      <RandomJokes />
+      {(props.gameData.chuckJokes &&<RandomJokes />)}
     </div>
   );
 };

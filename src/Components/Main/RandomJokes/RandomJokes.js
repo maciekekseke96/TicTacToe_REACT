@@ -3,7 +3,7 @@ import "./RandomJokes.scss";
 
 const RandomJokes = () => {
   const [jokes, setJokes] = useState(null);
-  const [randomNumber, setRandomNumber] = useState(0);
+  const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random() * 501));
 
   useEffect(() => {
     fetch("http://api.icndb.com/jokes")
@@ -11,7 +11,7 @@ const RandomJokes = () => {
       .then((data) => setJokes(data.value)).then(()=>{
           let intervalID = setInterval(()=>{
               setRandomNumber(Math.floor(Math.random() * 501))
-          },5000)
+          },10000)
       });
   }, []);
 
