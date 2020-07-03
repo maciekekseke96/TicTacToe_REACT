@@ -17,7 +17,9 @@ const Main = (props) => {
         actualSign={props.actualSign}
         setSign={props.setSign}
         setGameState={props.setGameState}
+        p1Score={props.p1Score}
         setP1Score={props.setP1Score}
+        p2Score={props.p2Score}
         setP2Score={props.setP2Score}
         p1Sign={props.p1Sign}
         setP1Sign={props.setP1Sign}
