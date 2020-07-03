@@ -4,6 +4,38 @@ import "./GameBoard.scss";
 
 const GameBoard = (props) => {
   const [cells, setCells] = useState([{}, {}, {}, {}, {}, {}, {}, {}, {}]);
+
+  const gameSolvers = [
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+
+  const solveGame = (solvers) => {
+    for (let i = 0; i < solvers.length; i++) {
+      let points = 0;
+      solvers[i].forEach((element) => {
+        if (cells[element].sign === "X") {
+          points++;
+        }
+      });
+      if (points === 3) {
+        console.log("Wygrał X");
+        break;
+        
+      }
+    }
+  };
+
+  useEffect(() => {
+    console.log("Zmieniono stan gry");
+    solveGame(gameSolvers);
+  }, cells);
   return (
     <div className={"gameBoard"}>
       {cells.map((cell, index) => {
