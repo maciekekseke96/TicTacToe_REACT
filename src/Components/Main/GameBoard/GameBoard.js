@@ -18,16 +18,21 @@ const GameBoard = (props) => {
 
   const solveGame = (solvers) => {
     for (let i = 0; i < solvers.length; i++) {
-      let points = 0;
+      let Xpoints = 0;
+      let Opoints = 0;
       solvers[i].forEach((element) => {
         if (cells[element].sign === "X") {
-          points++;
+          Xpoints++;
+        } else if (cells[element].sign === "O") {
+          Opoints++;
         }
       });
-      if (points === 3) {
+      if (Xpoints === 3) {
         console.log("Wygrał X");
         break;
-        
+      } else if (Opoints === 3) {
+        console.log("Wygrał O");
+        break;
       }
     }
   };
