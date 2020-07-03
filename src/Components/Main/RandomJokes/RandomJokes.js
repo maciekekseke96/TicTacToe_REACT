@@ -3,18 +3,20 @@ import "./RandomJokes.scss";
 
 const RandomJokes = () => {
   const [jokes, setJokes] = useState(null);
-  const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random() * 501));
+  const [randomNumber, setRandomNumber] = useState(
+    Math.floor(Math.random() * 501)
+  );
 
   useEffect(() => {
     fetch("http://api.icndb.com/jokes")
       .then((response) => response.json())
-      .then((data) => setJokes(data.value)).then(()=>{
-          let intervalID = setInterval(()=>{
-              setRandomNumber(Math.floor(Math.random() * 501))
-          },10000)
+      .then((data) => setJokes(data.value))
+      .then(() => {
+        let intervalID = setInterval(() => {
+          setRandomNumber(Math.floor(Math.random() * 501));
+        }, 10000);
       });
   }, []);
-
 
   if (jokes) {
     return (

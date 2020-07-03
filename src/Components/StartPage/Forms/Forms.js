@@ -39,15 +39,11 @@ const Forms = (props) => {
                 props.gameDataSet({
                   p1: {
                     name: player1Name,
-                    score: 0,
                     color: player1Color,
-                    sign: "X",
                   },
                   p2: {
                     name: player2Name,
-                    score: 0,
                     color: player2Color,
-                    sign: "O",
                   },
                   chuckJokes: chuckJokes,
                 });
