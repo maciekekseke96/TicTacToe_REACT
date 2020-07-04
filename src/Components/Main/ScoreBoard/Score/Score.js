@@ -37,7 +37,7 @@ const Score = (props) => {
     <div style={styles} className="score">
       <h1>{props.playerName}</h1>
       <p>{props.playerScore}</p>
-      <h4>Sign : {props.playerSign}</h4>
+      <h3>Sign : {props.playerSign}</h3>
     </div>
   );
 };

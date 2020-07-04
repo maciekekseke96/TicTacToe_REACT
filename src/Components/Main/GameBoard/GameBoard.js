@@ -5,6 +5,7 @@ import "./GameBoard.scss";
 const GameBoard = (props) => {
   const [cells, setCells] = useState([{}, {}, {}, {}, {}, {}, {}, {}, {}]);
 
+
   const gameSolvers = [
     [0, 3, 6],
     [1, 4, 7],
@@ -30,15 +31,15 @@ const GameBoard = (props) => {
       if (Xpoints === 3) {
         console.log("Wygrał X");
         props.setP1Score(Number(props.p1Score) + 1);
-        setTimeout(setCells([{}, {}, {}, {}, {}, {}, {}, {}, {}]), 2000);
-        setTimeout(props.setGameState(null));
+        setTimeout(()=> setCells([{}, {}, {}, {}, {}, {}, {}, {}, {}]), 1000);
+        setTimeout(() => props.setGameState(null), 1000);
         props.setSign("X");
         break;
       } else if (Opoints === 3) {
         console.log("Wygrał O");
         props.setP2Score(Number(props.p2Score) + 1);
-        setTimeout(setCells([{}, {}, {}, {}, {}, {}, {}, {}, {}]), 2000);
-        setTimeout(props.setGameState(null));
+        setTimeout(()=> setCells([{}, {}, {}, {}, {}, {}, {}, {}, {}]), 1000);
+        setTimeout(()=> props.setGameState(null), 1000);
         props.setSign("X");
         break;
       }
