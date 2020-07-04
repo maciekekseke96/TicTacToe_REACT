@@ -4,12 +4,8 @@ import Main from "./../Main/Main";
 import "./App.scss";
 
 function App() {
-  const [isPlayOn, setisPlayOn] = useState(true);
-  const [gameData, setGameData] = useState({
-    p1: { name: "Maciej", color: "black" },
-    p2: { name: "Piotrek", color: "black" },
-    chuckJokes: true,
-  });
+  const [isPlayOn, setisPlayOn] = useState(false);
+  const [gameData, setGameData] = useState(null);
   const [p1Score, setP1Score] = useState(0);
   const [p1Sign, setP1Sign] = useState("X");
   const [p2Sign, setP2Sign] = useState("O");

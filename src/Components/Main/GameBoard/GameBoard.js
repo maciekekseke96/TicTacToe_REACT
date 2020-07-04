@@ -24,6 +24,7 @@ const GameBoard = (props) => {
         if (cells[element].sign === "X") {
           Xpoints++;
         } else if (cells[element].sign === "O") {
+          
           Opoints++;
         }
       });
