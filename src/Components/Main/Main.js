@@ -11,6 +11,7 @@ const Main = (props) => {
         p1Sign={props.p1Sign}
         p2Score={props.p2Score}
         p2Sign={props.p2Sign}
+        actualSign={props.actualSign}
         gameData={props.gameData}
       />
       <GameBoard

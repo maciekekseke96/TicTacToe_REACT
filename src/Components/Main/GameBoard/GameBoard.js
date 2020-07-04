@@ -30,14 +30,16 @@ const GameBoard = (props) => {
       if (Xpoints === 3) {
         console.log("Wygrał X");
         props.setP1Score(Number(props.p1Score) + 1);
-        setTimeout(setCells([{}, {}, {}, {}, {}, {}, {}, {}, {}]), 1000);
+        setTimeout(setCells([{}, {}, {}, {}, {}, {}, {}, {}, {}]), 2000);
         setTimeout(props.setGameState(null));
+        props.setSign("X");
         break;
       } else if (Opoints === 3) {
         console.log("Wygrał O");
         props.setP2Score(Number(props.p2Score) + 1);
-        setTimeout(setCells([{}, {}, {}, {}, {}, {}, {}, {}, {}]), 1000);
+        setTimeout(setCells([{}, {}, {}, {}, {}, {}, {}, {}, {}]), 2000);
         setTimeout(props.setGameState(null));
+        props.setSign("X");
         break;
       }
     }
