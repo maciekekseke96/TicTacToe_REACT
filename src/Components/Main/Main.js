@@ -26,6 +26,8 @@ const Main = (props) => {
         setP1Sign={props.setP1Sign}
         p2Sign={props.p2Sign}
         setP2Sign={props.setP2Sign}
+        p1Color = {props.p1Color}
+        p2Color = {props.p2Color}
       />
     </div>
   );

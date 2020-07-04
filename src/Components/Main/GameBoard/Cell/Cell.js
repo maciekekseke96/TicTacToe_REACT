@@ -1,5 +1,4 @@
 import React from "react";
-import CellHover from "./CellHover/CellHover"
 import "./Cell.scss";
 
 const Cell = (props) => {

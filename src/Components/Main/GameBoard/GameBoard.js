@@ -5,6 +5,7 @@ import "./GameBoard.scss";
 const GameBoard = (props) => {
   const [cells, setCells] = useState([{}, {}, {}, {}, {}, {}, {}, {}, {}]);
 
+  const [winning, SetWinning] = useState(false)
 
   const gameSolvers = [
     [0, 3, 6],
@@ -32,14 +33,17 @@ const GameBoard = (props) => {
         console.log("Wygrał X");
         props.setP1Score(Number(props.p1Score) + 1);
         setTimeout(()=> setCells([{}, {}, {}, {}, {}, {}, {}, {}, {}]), 1000);
-        setTimeout(() => props.setGameState(null), 1000);
+        setTimeout(() => {
+          props.setGameState(null)}, 1000);
         props.setSign("X");
         break;
       } else if (Opoints === 3) {
         console.log("Wygrał O");
         props.setP2Score(Number(props.p2Score) + 1);
         setTimeout(()=> setCells([{}, {}, {}, {}, {}, {}, {}, {}, {}]), 1000);
-        setTimeout(()=> props.setGameState(null), 1000);
+        setTimeout(()=> {
+          props.setGameState(null);
+        }, 1000);
         props.setSign("X");
         break;
       }
@@ -54,7 +58,9 @@ const GameBoard = (props) => {
     <div className={"gameBoard"}>
       {cells.map((cell, index) => {
         return (
-          <Cell
+          !winning&&<Cell
+            p1Color = {props.p1Color}
+            p2Color = {props.p2Color}
             actualSign={props.actualSign}
             setSign={props.setSign}
             setGameState={props.setGameState}

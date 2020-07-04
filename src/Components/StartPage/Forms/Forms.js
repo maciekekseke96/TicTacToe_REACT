@@ -8,6 +8,13 @@ const Forms = (props) => {
   const [player1Color, setPlayer1Color] = useState("black");
   const [player2Color, setPlayer2Color] = useState("black");
   const [chuckJokes, setChuckJokes] = useState(false);
+
+  const handleplayer1Color = (e) => {
+    setPlayer1Color(e.target.value);
+  };
+  const handleplayer2Color = (e) => {
+    setPlayer2Color(e.target.value);
+  };
   return (
     <>
       <div className={"mainFormContainer"}>
@@ -21,7 +28,12 @@ const Forms = (props) => {
               onChange={(e) => setPlayer1Name(e.target.value)}
             ></input>
             <label>Let's choose your own color</label>
-            <input type={"text"} name={"color"}></input>
+            <select value={player1Color} onChange={handleplayer1Color}>
+        <option value="black">black</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+      </select>
           </form>
           <form>
             <label>Player's 2 Name</label>
@@ -32,7 +44,12 @@ const Forms = (props) => {
               onChange={(e) => setPlayer2Name(e.target.value)}
             ></input>
             <label>Let's choose your own color</label>
-            <input type={"text"} name={"color"}></input>
+            <select value={player2Color} onChange={handleplayer2Color}>
+        <option value="black">black</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+      </select>
             <button
               onClick={(e) => {
                 e.preventDefault();
