@@ -1,9 +1,10 @@
 .scoreBoard {
-    border: 1px solid black;
+    border: 5px solid black;
     width: 800px;
     height: 150px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     position: relative;
+    background-color: gold;
 }

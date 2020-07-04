@@ -23,8 +23,7 @@ const GameBoard = (props) => {
       solvers[i].forEach((element) => {
         if (cells[element].sign === "X") {
           Xpoints++;
-        } else if (cells[element].sign === "O") {
-          
+        } else if (cells[element].sign === "O") {  
           Opoints++;
         }
       });

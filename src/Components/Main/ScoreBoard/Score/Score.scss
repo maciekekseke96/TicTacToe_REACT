@@ -1,13 +1,14 @@
 .score {
   height: 80%;
   width: 20%;
-  border: 1px solid black;
+  border: 5px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   font-size: 12px;
   font-family: "Pangolin", cursive;
+  background-color: white;
 
   p {
     font-size: 24px;
