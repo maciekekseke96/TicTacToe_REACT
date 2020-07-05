@@ -19,8 +19,8 @@ function App() {
         p1Score={p1Score}
         setP1Score={setP1Score}
         p1Sign={p1Sign}
-        p1Color = {gameData.p1.color}
-        p2Color = {gameData.p2.color}
+        p1Color={gameData.p1.color}
+        p2Color={gameData.p2.color}
         setP1Sign={setP1Sign}
         p2Score={p2Score}
         setP2Score={setP2Score}
