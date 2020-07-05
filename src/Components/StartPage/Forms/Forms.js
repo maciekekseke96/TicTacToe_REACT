@@ -53,19 +53,28 @@ const Forms = (props) => {
             <button
               onClick={(e) => {
                 e.preventDefault();
-                props.gameDataSet({
-                  p1: {
-                    name: player1Name,
-                    color: player1Color,
-                  },
-                  p2: {
-                    name: player2Name,
-                    color: player2Color,
-                  },
-                  chuckJokes: chuckJokes,
-                });
-                props.setPlayOn(true);
-              }}
+                if(player1Name<1){
+                  alert('To short name for Player 1')
+                }
+                else if(player2Name<1){
+                  alert('To short name for Player 2')
+                }
+                else {
+                  props.gameDataSet({
+                    p1: {
+                      name: player1Name,
+                      color: player1Color,
+                    },
+                    p2: {
+                      name: player2Name,
+                      color: player2Color,
+                    },
+                    chuckJokes: chuckJokes,
+                  });
+                  props.setPlayOn(true);
+                }}
+                }
+
             >
               Let's play!
             </button>
