@@ -5,7 +5,8 @@ import "./GameBoard.scss";
 const GameBoard = (props) => {
   const [cells, setCells] = useState([{}, {}, {}, {}, {}, {}, {}, {}, {}]);
 
-  const [winning, SetWinning] = useState(false)
+  const [cellXColor, setCellXColor] = useState("black")
+  const [cellOColor, setCellOColor] = useState("black")
 
   const gameSolvers = [
     [0, 3, 6],
@@ -50,18 +51,34 @@ const GameBoard = (props) => {
     }
   };
 
+  const colorManage = () => {
+    if(props.p1Sign==="X"){
+      setCellXColor(props.p1Color)
+    } else if(props.p1Sign==="O"){
+      setCellOColor(props.p1Color)
+    }
+    if(props.p2Sign==="X"){
+      setCellXColor(props.p2Color)
+    }else if(props.p2Sign==="O"){
+      setCellOColor(props.p2Color)
+    }
+  }
+
   useEffect(() => {
     console.log("Zmieniono stan gry");
     solveGame(gameSolvers);
+    colorManage();
   }, cells);
   return (
     <div className={"gameBoard"}>
       {cells.map((cell, index) => {
         return (
-          !winning&&<Cell
+          <Cell
             p1Color = {props.p1Color}
             p2Color = {props.p2Color}
             actualSign={props.actualSign}
+            cellXColor = {cellXColor}
+            cellOColor = {cellOColor}
             setSign={props.setSign}
             setGameState={props.setGameState}
             cells={cells}
